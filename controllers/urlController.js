@@ -13,7 +13,7 @@ const handleGenerateShortID = async(req,res)=>{
         {shortid:shortID,
         originalurl:body.url}
     )
-    return res.status(200).json({id:shortID});
+    return res.render("home",{id:shortID})
 }
 
 const findTheOriginalUrl = async(req,res)=>{
@@ -27,5 +27,6 @@ const findTheOriginalUrl = async(req,res)=>{
     
     res.redirect(body.originalurl);
 }
+
 
 module.exports = {handleGenerateShortID,findTheOriginalUrl}

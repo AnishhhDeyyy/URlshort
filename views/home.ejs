@@ -6,9 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hey From Server</h1>
-    <% urls.forEach(url => { %>
-        <li><%= url.shortid %></li>
-    <% }); %>
+    <h1>URL SHORTENER</h1>
+    <% if (locals.id) { %>
+     <p>URL Generated: http://localhost:5000/url/<%=locals.id%></p>
+    <% } %>
+
+    <div>
+        <form action="/url" method="post">
+            <label for="">Enter Your URL </label>
+            <input type="text" name="url" placeholder="Enter your URL">
+            <button type="submit">Generate</button>
+        </form>
+
+    </div>
+    
+
+    
 </body>
 </html>

@@ -8,4 +8,8 @@ router.post('/',handleGenerateShortID);
 
 router.get('/:shortid',findTheOriginalUrl);
 
+
+
+//router.get('/test',forRender);
+
 module.exports = {router}
